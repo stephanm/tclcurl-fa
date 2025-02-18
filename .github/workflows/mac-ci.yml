@@ -18,13 +18,10 @@ jobs:
         brew update
         brew install tcl-tk@8 autoconf curl
         brew link tcl-tk@8
-        echo $PATH
-        find /usr/local -name tclConfig.sh
-        find /opt -name tclConfig.sh
     - name: configure
       run: |       
         autoreconf -vi
-        ./configure --with-tcl=/opt/homebrew/opt/tcl-tk/lib --prefix=/usr/local        
+        ./configure --with-tcl=/opt/homebrew/lib --prefix=/usr/local
     - name: make
       run: make
     - name: install
