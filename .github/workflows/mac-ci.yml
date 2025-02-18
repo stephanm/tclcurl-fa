@@ -18,7 +18,7 @@ jobs:
         brew update
         brew install tcl-tk@8 autoconf curl
         brew reinstall tcl-tk@8
-        find /usr -name tclConfig.sh
+        find /usr/local -name tclConfig.sh
         find /opt -name tclConfig.sh
     - name: configure
       run: |       
