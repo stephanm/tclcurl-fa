@@ -19,6 +19,7 @@ jobs:
         brew install tcl-tk@8 autoconf curl
         brew reinstall tcl-tk@8
         brew ls tcl-tk@8
+	find /opt/homebrew
     - name: configure
       run: |       
         autoreconf -vi
